@@ -8,7 +8,7 @@
 <style>
 :root{
   --bg:#0d0d0d;
-  --bg-soft:#151514;
+  --bg-soft:#121211;
   --gold:#c9a227;
   --gold-bright:#e0bd4a;
   --cream:#edeae3;
@@ -139,8 +139,8 @@ section{
 }
 .hero-eyebrow{
   font-family:'Space Mono',monospace;
-  font-size:12px;
-  letter-spacing:.3em;
+  font-size:18px;
+  letter-spacing:.2em;
   text-transform:uppercase;
   color:var(--gold);
   margin-bottom:28px;
@@ -269,6 +269,8 @@ section{
   background:var(--bg-soft);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .about-grid{
   display:grid;
@@ -281,6 +283,17 @@ section{
   overflow:hidden;
   aspect-ratio:4/5;
   filter:grayscale(15%);
+}
+.about-photo ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Градієнт від прозорого до темно-сірого/чорного */
+  background: linear-gradient(to right, transparent 85%, rgba(0, 0, 0, 0.8));
+  pointer-events: none; /* Щоб шар не заважав клікати по фото */
 }
 .about-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 .about h2{font-size:clamp(32px,4.5vw,48px);margin-bottom:6px;}
@@ -312,6 +325,8 @@ section{
 /* ===== FOR WHOM ===== */
 .forwhom{
   position:relative;
+  padding-top: 5%;
+    padding-bottom: 5%;
 }
 .forwhom .head{
   text-align:center;
@@ -570,6 +585,8 @@ footer{
   padding:50px 0;
   text-align:center;
 }
+
+
 footer .logo{
   font-family:'Oswald',sans-serif;
   font-size:20px;
@@ -635,7 +652,7 @@ footer p{font-size:13px;color:var(--grey);}
 <section class="about" id="about">
   <div class="container about-grid">
     <div class="about-photo">
-      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=900&auto=format&fit=crop" alt="Про психолога">
+      <img src="https://res.cloudinary.com/dhh4t3f90/image/upload/v1781543776/IMG_0139_w3vzjd.jpg" alt="Про психолога">
     </div>
     <div>
       <span class="eyebrow">Хто веде тренінг</span>
@@ -658,7 +675,7 @@ footer p{font-size:13px;color:var(--grey);}
           <div class="label">Авторська методика</div>
         </div>
         <div class="stat">
-          <div class="num">2 дні</div>
+          <div class="num">4 дні</div>
           <div class="label">Інтенсиву</div>
         </div>
       </div>
@@ -698,14 +715,19 @@ footer p{font-size:13px;color:var(--grey);}
       <div>
         <span class="eyebrow">Програма</span>
         <h2>Структура тренінгу</h2>
+        <h1 class="hero-h1">
+        <span class="accent-line" style="padding-top: 10px;">6 МОДУЛІВ</span>
+        </h1>
+        <h3 style="padding-top: 20px; font-size: 25px;">12 Практичних інструментів</h3>
+
+
       </div>
-      <p>Два дні глибокої роботи з вашим ставленням до грошей — від усвідомлення сценаріїв до конкретного плану дій.</p>
     </div>
 
     <div class="module">
       <div class="mnum">01</div>
       <div>
-        <h3>Ваш грошовий сценарій</h3>
+        <h3>Чому не вистачає грошей?</h3>
         <p>Знайдемо переконання про гроші, які ви несвідомо «успадкували» і які саме зараз стримують ваш фінансовий ріст.</p>
       </div>
     </div>
